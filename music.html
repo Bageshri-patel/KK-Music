@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>My Music</title>
+    <style>
+      h1 {
+        width: 400px;
+        height: 70px;
+        background-color: rgba(21, 45, 65, 0.979);
+        font-weight: bold;
+        position: relative;
+        animation: mymove 5s infinite;
+      }
+      #div1 {
+        animation-timing-function: linear;
+      }
+
+      @keyframes mymove {
+        from {
+          left: 550px;
+        }
+        to {
+          left: 900px;
+        }
+      }
+    </style>
+  </head>
+  <link rel="stylesheet" href="music.css" />
+  <body>
+    <h1 id="div1">
+      <i><u>Music is life</u></i>
+    </h1>
+    <br />
+    <h2>Select and Listen Your Favourite Music</h2>
+    <div class="container">
+      <b>
+        <p>Select Language:</p>
+
+        <a href="hindi.html" target="_self">Hindi</a>
+        <a href="english.html" target="_self">English</a>
+      </b>
+    </div>
+    <div class="front">
+      <img class="front1" src="front1.jpg" />
+      <img class="front2" src="front2.jpg" />
+      <img class="front3" src="front3.jpg" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>English Songs</title>
+    <link rel="stylesheet" href="english.css" />
+  </head>
+  <body class="root">
+    <h1>English Songs</h1>
+
+    <div class="heading">
+      <aside>
+        <div class="container">
+          <a onclick="list(1)"><b>Classical songs</b></a>
+          <div class="csong" style="display: none">
+            <script>
+              // function song(audioSrc, videoSrc) {
+              //   document.getElementsByClassName("audio")[0].src = audioSrc;
+              //   document.getElementById("audio1").load();
+
+              //   document.getElementsByClassName("video")[0].src = videoSrc;
+              //   document.getElementById("video1").load();
+              //   document.getElementById("video1").play();
+              // }
+
+              function list(z) {
+                document.getElementsByClassName("csong")[0].style.display =
+                  "none";
+                document.getElementsByClassName("popsong")[0].style.display =
+                  "none";
+                document.getElementsByClassName("latestsong")[0].style.display =
+                  "none";
+                let k;
+                if (z == "1") {
+                  k = document.getElementsByClassName("csong");
+                } else if (z == "2") {
+                  k = document.getElementsByClassName("popsong");
+                } else {
+                  k = document.getElementsByClassName("latestsong");
+                }
+                console.log(k);
+                let Q = k[0].style.display;
+                if (Q == "none") {
+                  k[0].style.display = "block";
+                } else {
+                  k[0].style.display = "none";
+                }
+              }
+            </script>
+          </div>
+
+          <a onclick="list(2)"><b>Pop songs</b></a>
+          <div class="popsong" style="display: none">
+            <!-- <ul>
+              <li>
+                <p
+                  onclick="song('oldsong/Jab Koi Baat.mp3', 'oldsongvideo/Jab Koi Baat video.mp4')"
+                >
+                  Jab Koi Baat Bigad Jaye
+                </p>
+              </li>
+
+              <li>
+                <p
+                  onclick="song('oldsong/Kya Hua Tera Wada.mp3', 'oldsongvideo/Kya Hua Tera Wada.mp4')"
+                >
+                  Kya Hua Tera Wada
+                </p>
+              </li>
+
+              <li>
+                <p
+                  onclick="song('oldsong/Mere sammne Wali.mp3', 'oldsongvideo/Mere Sammne Wali.mp4')"
+                >
+                  Mere Sammne Wali
+                </p>
+              </li>
+
+              <li>
+                <p
+                  onclick="song('oldsong/Raja Ko Rani Se.mp3', 'oldsongvideo/Raja Ko Rani Se.mp4')"
+                >
+                  Raja Ko Rani Se Pyar
+                </p>
+              </li>
+
+              <li>
+                <p
+                  onclick="song('oldsong/Waada Raha Sanam.mp3', 'oldsongvideo/Waada Raha Sanam.mp4')"
+                >
+                  Waada Raha Sanam
+                </p>
+              </li>
+            </ul> -->
+          </div>
+
+          <a onclick="list(3)"><b>Party songs</b></a>
+          <div class="partysong" style="display: none">
+            <!-- <ul>
+              <li>
+                <p
+                  onclick="song('partysong/Aankh Marey.mp3', 'partysongvideo/Aankh Marey.mp4')"
+                >
+                  Aankh Marey
+                </p>
+              </li>
+
+              <li>
+                <p
+                  onclick="song('partysong/Bom Diggy Diggy.mp3', 'partysongvideo/Bom Diggy Diggy.mp4')"
+                >
+                  Bom Diggy Diggy
+                </p>
+              </li>
+
+              <li>
+                <p
+                  onclick="song('partysong/Coca Cola.mp3', 'partysongvideo/Coca Cola.mp4')"
+                >
+                  Coca Cola
+                </p>
+              </li>
+
+              <li>
+                <p
+                  onclick="song('partysong/Dilbar.mp3', 'partysongvideo/Dilbar.mp4')"
+                >
+                  Dilbar
+                </p>
+              </li>
+            </ul> -->
+          </div>
+          <a onclick="song()"><b>Latest songs</b></a>
+          <a onclick="song()"><b>Breakup songs</b></a>
+        </div>
+      </aside>
+      <div class="test">
+        <audio id="audio1" controls>
+          <source class="audio" type="audio/mp3" /></audio
+        ><br /><br /><br />
+        <video id="video1" width="100%" height="60%" controls>
+          <source class="video" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </body>
+</html>
